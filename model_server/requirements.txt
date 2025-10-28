@@ -1,0 +1,9 @@
+fastapi
+uvicorn[standard]
+pymongo
+python-dotenv
+onnxruntime
+numpy
+tensorflow
+pillow
+python-multipart

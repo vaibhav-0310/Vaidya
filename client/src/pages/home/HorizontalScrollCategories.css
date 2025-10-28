@@ -1,0 +1,23 @@
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-scroll {
+  display: flex;
+  animation: scroll 50s linear infinite;
+  width: max-content;
+}
+
+.py-4{
+    text-align: center;
+}
+.small{
+    font-size: larger;
+    font-weight: bold;
+    color: black !important;
+}
