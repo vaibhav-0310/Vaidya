@@ -3,7 +3,6 @@ import Hero from "./hero";
 import HorizontalScrollCategories from "./scroll";
 import Services from "./services";
 import Footer from "../../utils/footer";
-import Gallery from "../../utils/gallery";
 
 
 function Home() {
@@ -15,7 +14,7 @@ function Home() {
       <Hero />
       <HorizontalScrollCategories />
       <Services />
-      <Gallery />
+  
       <Footer />
     </>
   );

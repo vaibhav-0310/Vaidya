@@ -100,10 +100,10 @@ body {
   width: 90% !important;
   border-radius: 30px;
   margin-bottom: 20px;
-  background-image: url("https://cdn.prod.website-files.com/67607a4da94c236117377bec/677225d96a3091c1df773e4e_img-footer.svg");
+  background-image: url("./assests/mark.png");
   background-position: 100% 100%;
   background-repeat: no-repeat;
-  background-size: auto;
+  background-size: contain;
 }
 
 /* blogs */
