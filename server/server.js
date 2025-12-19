@@ -119,7 +119,7 @@ async function setupPinecone() {
   const indexName = 'medical-documents';
   
   try {
-    console.log('🔍 Checking for existing indexes...\n');
+    console.log('Checking for existing indexes...\n');
     
     // Check if index already exists
     const existingIndexes = await pinecone.listIndexes();
@@ -128,37 +128,37 @@ async function setupPinecone() {
     );
 
     if (indexExists) {
-      console.log(`✅ Index "${indexName}" already exists!`);
-      console.log('📊 You can start using the API now.\n');
+      console.log(`Index "${indexName}" already exists!`);
+      console.log('You can start using the API now.\n');
       return;
     }
 
     // Create new index
-    console.log(`📝 Creating index "${indexName}"...\n`);
+    console.log(`Creating index "${indexName}"...\n`);
     
     await pinecone.createIndex({
       name: indexName,
-      dimension: 3072, // text-embedding-3-large dimension
+      dimension: 3072, 
       metric: 'cosine',
       spec: {
         serverless: {
           cloud: 'aws',
-          region: 'us-east-1' // Change based on your location
+          region: 'us-east-1' 
         }
       }
     });
 
-    console.log('✅ Index created successfully!\n');
-    console.log('⏳ Please wait 30-60 seconds for the index to initialize...\n');
-    console.log('💡 Tip: Run test-pinecone.js to verify the setup\n');
+    console.log(' Index created successfully!\n');
+    console.log('Please wait 30-60 seconds for the index to initialize...\n');
+    console.log('Tip: Run test-pinecone.js to verify the setup\n');
     
   } catch (error) {
-    console.error('❌ Error:', error.message);
+    console.error(' Error:', error.message);
     
     if (error.message.includes('ALREADY_EXISTS')) {
-      console.log('✅ Index already exists, you can proceed!\n');
+      console.log('Index already exists, you can proceed!\n');
     } else if (error.message.includes('API key')) {
-      console.log('💡 Tip: Check your PINECONE_API_KEY in .env file\n');
+      console.log('Tip: Check your PINECONE_API_KEY in .env file\n');
     }
   }
 }
